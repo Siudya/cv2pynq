@@ -425,7 +425,7 @@ class cv2pynq():
         def init(self,cmaArray):
             self._nbytes = cmaArray.nbytes
             self.device_address = cmaArray.physical_address
-            self.cacheable = cmaArray.cacheable
+            self.coherent = not cmaArray.cacheable
         # overwrite access to nbytes with own function
         @property
         def nbytes(self):
