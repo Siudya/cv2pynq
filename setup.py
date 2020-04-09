@@ -3,7 +3,7 @@ import os
 import shutil
 import cv2pynq
 
-if 'BOARD' not in os.environ or os.environ['BOARD'] != 'Pynq-Z1' or os.environ['BOARD'] != 'Pynq-Z2':
+if 'BOARD' not in os.environ or (os.environ['BOARD'] != 'Pynq-Z1' and os.environ['BOARD'] != 'Pynq-Z2'):
     print("Only supported on a Pynq Z1 Board or Pynq Z2 Board")
     exit(1)
 
