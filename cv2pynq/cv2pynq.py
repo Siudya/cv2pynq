@@ -424,7 +424,7 @@ class cv2pynq():
     class ContiguousArrayCv2pynq(ContiguousArray):
         def init(self,cmaArray):
             self._nbytes = cmaArray.nbytes
-            self.physical_address = cmaArray.physical_address
+            self.device_address = cmaArray.physical_address
             self.cacheable = cmaArray.cacheable
         # overwrite access to nbytes with own function
         @property
