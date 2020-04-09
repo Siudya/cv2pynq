@@ -47,13 +47,13 @@ class cv2pynq():
         self.dilateIP = self.img_filters.dilate_hls_0
         self.dilateIP.reset()
         self.cmaBuffer_0 = self.xlnk.cma_array(shape=(self.MAX_HEIGHT,self.MAX_WIDTH), dtype=np.uint8)
-        self.cmaBuffer0 =  self.cmaBuffer_0.view(type = self.ContiguousArrayCv2pynq)
+        self.cmaBuffer0 =  self.cmaBuffer_0.view(self.ContiguousArrayCv2pynq)
         self.cmaBuffer0.init(self.cmaBuffer_0)
         self.cmaBuffer_1 = self.xlnk.cma_array(shape=(self.MAX_HEIGHT,self.MAX_WIDTH), dtype=np.uint8)
-        self.cmaBuffer1 =  self.cmaBuffer_1.view(type = self.ContiguousArrayCv2pynq)
+        self.cmaBuffer1 =  self.cmaBuffer_1.view(self.ContiguousArrayCv2pynq)
         self.cmaBuffer1.init(self.cmaBuffer_1)
         self.cmaBuffer_2 = self.xlnk.cma_array(shape=(self.MAX_HEIGHT*4,self.MAX_WIDTH), dtype=np.uint8) # *4 for CornerHarris return
-        self.cmaBuffer2 =  self.cmaBuffer_2.view(type = self.ContiguousArrayCv2pynq)
+        self.cmaBuffer2 =  self.cmaBuffer_2.view(self.ContiguousArrayCv2pynq)
         self.cmaBuffer2.init(self.cmaBuffer_2)
         self.CannyIP = self.img_filters.canny_edge_0
         self.CannyIP.reset()
