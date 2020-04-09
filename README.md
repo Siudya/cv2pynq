@@ -10,9 +10,7 @@ are located in the contiguous memory of the chip.
 ## Get Started
 Install by typing: 
 ```
-git clone https://github.com/wbrueckner/cv2pynq.git   
-cd cv2pynq/   
-pip3.6 install -e .   
+sudo pip3 install git+https://github.com/Siudya/cv2pynq.git 
 ``` 
 into the terminal on your Pynq-Z1 board.   
 The library comes with a [jupyter notebook](https://github.com/wbrueckner/cv2pynq/blob/master/notebooks/cv2PYNQ%20-%20Get%20Started.ipynb) to demonstrate its usage and capabilities.
